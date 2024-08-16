@@ -14,6 +14,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Get the author of the PR
-        id: get_author
-        run: echo "This PR is opened by ${{ github.actor }} ."
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: .github/actions/notify-author
+
+      - name: Get the author slack
+        id: get-author-slack
+        uses: ./.github/actions/notify-author
+
+      - name: Notify the author
+        run: echo "Notifying ${{ steps.get-author-slack.outputs.notified-user }}"

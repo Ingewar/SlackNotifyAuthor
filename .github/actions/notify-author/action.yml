@@ -1,0 +1,14 @@
+name: 'Notify PR Author'
+description: 'A custom action that will notify the author of a PR'
+inputs:
+  who-to-notify:
+    description: 'Who to notify'
+    required: true
+    default: 'author'
+  contributors-path:
+    description: 'Path to contributors file'
+    required: false
+    default: '.github/contributors.yml'
+runs:
+  using: 'node20'
+  main: 'index.js'
