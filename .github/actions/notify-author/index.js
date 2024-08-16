@@ -1,6 +1,5 @@
 // .github/actions/my-custom-action/index.js
 const core = require('@actions/core');
-const users = require('./users.json');
 const readYamlFile = require('read-yaml-file');
 
 try {
