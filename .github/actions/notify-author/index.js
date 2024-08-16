@@ -1,4 +1,3 @@
-// .github/actions/my-custom-action/index.js
 const core = require('@actions/core');
 const readYamlFile = require('read-yaml-file');
 
@@ -8,8 +7,6 @@ try {
   const contributorsPath = core.getInput('contributors-path');
   const contributors = readYamlFile.sync(contributorsPath);
   console.log(contributors);
-  const user = users[whoToNotify];
-  console.log(`Notifing ${user}`);
     // Set the output value
   core.setOutput('notified-user', user);
 
