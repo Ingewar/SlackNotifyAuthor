@@ -14,4 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Add your desired steps here to notify the author of the pull request
+      - name: Get the author of the PR
+        id: get_author
+        run: echo "::set-output name=author::$(jq -r '.pull_request.user.login' $GITHUB_EVENT_PATH)"
