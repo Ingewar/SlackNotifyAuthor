@@ -1,0 +1,17 @@
+name: Notify Author
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Add your desired steps here to notify the author of the pull request
