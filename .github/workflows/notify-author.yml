@@ -31,4 +31,4 @@ jobs:
           who-to-notify: ${{ github.actor }}
 
       - name: Notify the author
-        run: echo "Notifying ${{ steps.get-author-slack.outputs.slack }}"
+        run: echo "Notifying ${{ steps.get-author-slack.outputs.notified-user }}"
