@@ -17,3 +17,8 @@ jobs:
       - name: Get the author of the PR
         id: get_author
         run: echo "This PR is opened by ${{ github.ACTOR }} ."
+
+      - name: Run custom action
+        uses: ./.github/actions/my-custom-action
+        with:
+          my-input: 'World'
