@@ -1,10 +1,14 @@
 # .github/actions/my-custom-action/action.yml
 name: 'Notify PR Author'
-description: 'A custom action to demonstrate how to create one'
+description: 'A custom action that will notify the author of a PR'
 inputs:
   slack-bot-token:
     description: 'Slack bot token'
     required: true
+  who-to-notify:
+    description: 'Who to notify'
+    required: true
+    default: 'author'
 runs:
   using: 'node20'
   main: 'index.js'

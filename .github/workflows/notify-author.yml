@@ -31,3 +31,4 @@ jobs:
         uses: ./.github/actions/notify-author
         with:
           slack-bot-token: 'Some token'
+          who-to-notify: ${{ github.actor }}
