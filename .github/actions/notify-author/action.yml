@@ -2,10 +2,9 @@
 name: 'Notify PR Author'
 description: 'A custom action to demonstrate how to create one'
 inputs:
-  my-input:
-    description: 'An example input'
+  slack-bot-token:
+    description: 'Slack bot token'
     required: true
-    default: 'default value'
 runs:
   using: 'node20'
   main: 'index.js'
