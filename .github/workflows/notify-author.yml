@@ -16,4 +16,4 @@ jobs:
 
       - name: Get the author of the PR
         id: get_author
-        run: echo "This PR is opened by ${{ env.GIT_COMMITTER_NAME }} ."
+        run: echo "This PR is opened by ${{ github.GIT_COMMITTER_NAME }} ."
