@@ -16,4 +16,4 @@ jobs:
 
       - name: Get the author of the PR
         id: get_author
-        run: echo "This PR is opened by ${{ github.ACTOR }} ."
+        run: echo "This PR is opened by ${{ github.actor }} ."
