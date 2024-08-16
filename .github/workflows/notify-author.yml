@@ -26,9 +26,6 @@ jobs:
       - name: Get the author slack
         id: get-author-slack
         uses: ./.github/actions/notify-author
-        with:
-          slack-bot-token: 'Some token'
-          who-to-notify: ${{ github.actor }}
 
       - name: Notify the author
         run: echo "Notifying ${{ steps.get-author-slack.outputs.notified-user }}"
