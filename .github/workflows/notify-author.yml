@@ -13,3 +13,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Get the author of the PR
+        id: get_author
+        run: echo "This PR is opened by ${{ github.ACTOR }} ."
