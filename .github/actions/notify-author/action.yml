@@ -9,6 +9,10 @@ inputs:
     description: 'Who to notify'
     required: true
     default: 'author'
+  contributors-path:
+    description: 'Path to contributors file'
+    required: false
+    default: '.github/contributors.yml'
 runs:
   using: 'node20'
   main: 'index.js'
